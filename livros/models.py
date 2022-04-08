@@ -9,3 +9,5 @@ class Livros(models.Model):
 
     def __str__(self):
         return self.titulo
+    class Meta:
+        verbose_name_plural = 'Livros'
