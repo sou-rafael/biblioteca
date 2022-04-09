@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block area1 %}
+<div class='container'>
+    <ul>
+        <li>Título: {{livro.titulo}}</li>
+        <li>Descrição: {{livro.descricao}}</li>
+        <li>Editora: {{livro.editora}}</li>
+        <li>Quantidade: {{livro.quantidade}}</li>
+        <li>Data de Cadastro: {{livro.data_cadastro}}</li>
+    </ul>
+
+</div>
+
+{% endblock area1 %}

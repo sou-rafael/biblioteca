@@ -1,7 +1,12 @@
 {%extends 'livros/base.html'%}
 
 {%block area1%}
-
+    <form method="POST">
+        {% csrf_token %}
+            
+            {{ form.as_p}}
+                <input type="submit" name="cadastrar"  value="Cadastrar">
+    </form>
 
 
 {%endblock area1%}

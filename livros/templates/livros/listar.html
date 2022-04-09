@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block area1 %}
+<div class='container'>
+    <h2>Listando todos os livros</h2>
+
+    {%for livro in livros%}
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="/livros/{{livro.id}}" style='text-decoration:none;'>{{livro.titulo}}</a>
+            
+            <a href='/livros/editar/{{livro.id}}' style='text-decoration:none;'>Editar</a>
+            <a href='/livros/deletar/{{livro.id}}' style='text-decoration:none;'>Deletar</a>
+        </li>
+    </ul>
+    {%endfor%}
+</div>
+
+{%endblock%}
