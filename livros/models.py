@@ -1,7 +1,7 @@
 from django.db import models
 
 class Livros(models.Model):
-    titulo = models.CharField(max_length=300)
+    titulo = models.CharField(max_length=150)
     descricao = models.CharField(max_length=400)
     editora = models.CharField(max_length=200)
     quantidade = models.IntegerField()

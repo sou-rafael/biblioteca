@@ -1,15 +1,17 @@
-{% extends 'base.html' %}
+{% extends 'livros/base.html' %}
+{% load bootstrap4 %}
 
-{% block area1 %}
-<div class='container'>
-    <ul>
-        <li>Título: {{livro.titulo}}</li>
-        <li>Descrição: {{livro.descricao}}</li>
-        <li>Editora: {{livro.editora}}</li>
-        <li>Quantidade: {{livro.quantidade}}</li>
-        <li>Data de Cadastro: {{livro.data_cadastro}}</li>
+{% block content %}
+<div class='container mt-5'>
+    <ul class="list-group list-group-flush">
+        <h1 class="list-group-item">Informações sobre o item</h1>
+        <li class="list-group-item">Título: {{livro.titulo}}</li>
+        <li class="list-group-item">Descrição: {{livro.descricao}}</li>
+        <li class="list-group-item">Editora: {{livro.editora}}</li>
+        <li class="list-group-item">Quantidade: {{livro.quantidade}}</li>
+        <li class="list-group-item">Data de Cadastro: {{livro.data_cadastro}}</li>
     </ul>
 
 </div>
 
-{% endblock area1 %}
+{% endblock %}

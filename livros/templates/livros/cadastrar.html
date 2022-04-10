@@ -1,12 +1,15 @@
 {%extends 'livros/base.html'%}
+{%load bootstrap%}
 
-{%block area1%}
+{%block content%}
+<div class='container mt-5'>
+    <p class='h2'>Cadastrar</p>
     <form method="POST">
         {% csrf_token %}
             
-            {{ form.as_p}}
+            {{ form|bootstrap}}
                 <input type="submit" name="cadastrar"  value="Cadastrar">
     </form>
+</div>
 
-
-{%endblock area1%}
+{% endblock %}

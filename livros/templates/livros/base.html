@@ -1,11 +1,12 @@
 {% load bootstrap4 %}
+{% load bootstrap %}
+
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 
     <title>Biblioteca SENAC</title>
 
@@ -18,48 +19,45 @@
 
     <header>
       <!-- Fixed navbar -->
+    <div>  
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="#">Biblioteca SENAC</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
+              <a class="nav-link" aria-current='page' href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/listar">Listar</a>
+              <a class="nav-link" aria-current='page' href="/livros/listar">Listar</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/cadastro">Cadastro</a>
+              <a class="nav-link" aria-current='page' href="/livros/cadastrar">Cadastro</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/buscar">Buscar</a>
+              <a class="nav-link" aria-current='page' href="/livros/buscar">Buscar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="admin/">Administração</a>
+                <a class="nav-link" aria-current='page' href="/admin">Administração</a>
               </li>
           </ul>
         </div>
       </nav>
+    </div>
     </header>
 
     {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
 
     <!-- Begin page content -->
-    {% block area1 %}
+    {% block content %}
     <main role="main" class="container">
       <h1 class="mt-5">Biblioteca SENAC</h1>
-      <p class="lead">O conteudo do site fica aqui.</p>
-    </main>
-    
-    <div class="container">
+      <p class="lead justify-center">O conteudo do site fica aqui.</p>
       <img src="https://fgg.edu.br/wp-content/uploads/2019/03/banner_biblioteca-1.jpg" class="d-block w-100" alt="...">
-    </div>
-          <!-- Listagem inserida direto na pagina HOME -->
+
+    </main>
         
-    {% endblock %}
+    {%endblock%}
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

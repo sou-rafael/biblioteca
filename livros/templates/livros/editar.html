@@ -1,8 +1,17 @@
 {%extends 'livros/base.html'%}
+{% load bootstrap4 %}
+{% load bootstrap %}
 
-{%block area1%}
-<h2>Editar</h2>
-{% csrf_token %}
-<!-- posso fazer isso usando o bootstrap4 com form dele... Pesquisar sobre isso -->
-
-{%endblock area1%}
+{% block content %}
+<div class="container mt-5">
+    <p class='h2'>Editando "{{livro.titulo}}"</p>
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|bootstrap }}
+                <input type="submit" class="btn btn-light" value="Salvar">
+        </form>
+        
+    </div>
+</div>
+{%endblock%}
