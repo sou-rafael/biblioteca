@@ -5,6 +5,14 @@
     <div class='container mt-5'>
         <h2>Listando todos os livros</h2>
 
+        <p class="lead justify-center">Digite aqui o título do livro que deseja:</p>
+      <form method='GET'>
+        <div class='input-group-prepend'>
+          <button class="btn btn-light" type="submit" id="button-addon1">Buscar</button>
+        </div>
+        <input type="text" class="form-control" name="search" id="search">
+      </form>
+
         {%if messages%}
             <div class='alert alert-info'>
                 {%for message in messages%}

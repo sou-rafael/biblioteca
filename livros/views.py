@@ -9,6 +9,10 @@ def index(request):
 
 def listar(request):
     livros = Livros.objects.all()
+    busca = request.GET.get('search')
+    if busca:
+        livros = Livros.objects.filter(titulo__icontains = busca)
+   
     return render(request, 'livros/listar.html', {'livros': livros})
 
 
