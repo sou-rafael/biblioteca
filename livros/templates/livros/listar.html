@@ -1,16 +1,17 @@
 {% extends 'livros/base.html' %}
 {% load bootstrap4 %}
+{%load static%}
 
 {% block content %}
     <div class='container mt-5'>
-        <h2>Listando todos os livros</h2>
+        <h2>Livros</h2>
 
-        <p class="lead justify-center">Digite aqui o título do livro que deseja:</p>
-      <form method='GET'>
+      <form id='form-busca'method='GET'>
+        <input type="text" class="form-control" name="search" id="search">
+
         <div class='input-group-prepend'>
           <button class="btn btn-light" type="submit" id="button-addon1">Buscar</button>
         </div>
-        <input type="text" class="form-control" name="search" id="search">
       </form>
 
         {%if messages%}
