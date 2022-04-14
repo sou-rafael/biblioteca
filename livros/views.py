@@ -8,6 +8,7 @@ def index(request):
     return render(request, "livros/base.html")
 
 def listar(request):
+    '''listar com implementação de busca.'''
     livros = Livros.objects.all()
     busca = request.GET.get('search')
     if busca:
@@ -52,5 +53,3 @@ def deletar(request, id):
     livro.delete()
     messages.info(request, 'Deletado!')
     return redirect('/livros/listar')
-
-#def buscar(request,)
